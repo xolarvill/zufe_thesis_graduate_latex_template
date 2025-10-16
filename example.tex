@@ -1,0 +1,167 @@
+%!TEX program = xelatex
+% ==================== 文档类选项 ====================
+% 学位类型: master(硕士) 或 doctor(博士)
+% 论文版本: blind(盲审) / defense(答辩) / final(正式)
+\documentclass[master,final]{zufe-thesis}
+
+% ==================== 自定义字体设置（可选）====================
+% 若需使用本地 TTF 字体，请取消注释并指定路径
+% \setCJKmainfont[Path=./]{SimSun.ttf}
+% \setCJKsansfont[Path=./]{SimHei.ttf}
+% \setCJKmonofont[Path=./]{KaiTi.ttf}
+% \setmainfont[Path=./]{TimesNewRoman.ttf}
+
+% ==================== 额外宏包 ====================
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathrsfs}
+
+% ==================== 参考文献 ====================
+\addbibresource{example.bib} % 请确保 example.bib 存在或替换为你的 .bib 文件
+
+% ==================== 论文基本信息（占位符）====================
+\thesisTitle{基于动态优化模型的劳动力迁移行为研究}
+\thesisTitleEN{A Study on Labor Migration Behavior Based on Dynamic Optimization Models}
+\authorName{张三}                % 示例姓名
+\studentID{202300000000}         % 示例学号
+\mentorName{李四}                % 示例导师
+\mentorTitle{教授}
+\majorName{应用经济学}
+\deptName{经济学院}
+\submitDate{2025年6月}
+\submitDateEN{June 2025}
+
+% ==================== 正文开始 ====================
+\begin{document}
+
+% -------------------- 封面 --------------------
+\makethesiscover
+
+% -------------------- 声明页（盲审版自动省略）--------------------
+\makestatement
+
+% -------------------- 中英文扉页 --------------------
+\makechinesetitlepage
+\makeenglishtitlepage
+
+% -------------------- 前置部分（罗马页码）--------------------
+\frontmatter
+
+% 中文摘要
+\begin{abstract}
+本文构建了一个动态最优居住地选择模型，用于分析劳动力迁移决策的内在机制。研究结合微观调查数据，采用计量经济学方法实证检验了收入、家庭结构、区域发展水平等因素对迁移行为的影响。结果表明，个体迁移决策具有显著的动态调整特征，且存在明显的回流倾向。本文的创新之处在于将动态规划方法引入迁移研究，并提出了政策启示。
+
+\keywords{劳动力迁移；动态优化；回流行为；居住地选择}
+\end{abstract}
+
+% 英文摘要（关键词自动转小写）
+\begin{abstracten}
+This paper constructs a dynamic optimal residential location choice model to analyze the internal mechanism of labor migration decisions. Combining micro-survey data and econometric methods, the study empirically examines the impact of income, family structure, and regional development on migration behavior. Results show that individual migration decisions exhibit significant dynamic adjustment characteristics and a clear return tendency. The main contribution lies in integrating dynamic programming into migration research and offering policy implications.
+
+\keywordsen{labor migration; dynamic optimization; return behavior; residential location choice}
+\end{abstracten}
+
+% 目录
+\tableofcontents
+
+% -------------------- 正文部分（阿拉伯页码）--------------------
+\mainmatter
+
+\chapter{绪论}
+\section{研究背景与意义}
+随着城镇化进程加快，劳动力迁移已成为影响区域协调发展的重要因素。本文旨在……（此处为示例正文，实际写作应详实）。
+
+\subsection{文献综述}
+国外学者如 \textcite{greenwood1997} 早期研究了迁移的推拉理论；国内研究则多聚焦于……。
+
+\section{研究框架}
+本文共分为五章。第二章构建理论模型，第三章介绍数据与实证策略……
+
+\chapter{理论模型}
+\section{模型设定}
+考虑代表性个体在时期 \( t \) 的效用函数：
+\begin{equation}\label{eq:utility}
+U_t = \ln(C_t) + \theta \cdot V(L_t) - \phi \cdot D(L_t, L_{t-1})
+\end{equation}
+其中 \( C_t \) 为消费，\( L_t \) 为居住地，\( D(\cdot) \) 为迁移成本。
+
+\chapter{实证分析}
+\section{数据来源}
+本文使用中国家庭追踪调查（CFPS）2010–2020年面板数据。
+
+\begin{table}[htbp]
+\centering
+\caption{主要变量描述性统计}
+\label{tab:stats}
+\begin{tabular}{lcc}
+\toprule
+变量 & 均值 & 标准差 \\
+\midrule
+是否迁移 & 0.18 & 0.38 \\
+月收入（千元） & 6.2 & 4.1 \\
+教育年限 & 10.3 & 3.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{回归结果}
+基准回归结果见表~\ref{tab:stats}，关键变量在 1\% 水平上显著。
+
+\chapter{结论与政策建议}
+\section{主要结论}
+第一，迁移决策具有路径依赖；第二，收入效应显著但非线性……
+
+\section{政策建议}
+建议完善户籍制度、加强中西部公共服务供给……
+
+% -------------------- 后置部分 --------------------
+\backmatter
+
+% 参考文献
+\printbibliography[heading=bibintoc, title=参考文献]
+
+% 附录
+\appendix
+\chapter{模型推导细节}
+附录公式编号为式~\ref{eq:appendix}。
+\begin{equation}\label{eq:appendix}
+\frac{\partial U}{\partial L} = 0
+\end{equation}
+
+\chapter{补充图表}
+附录表格编号为表~\ref{tab:appendix}。
+\begin{table}[htbp]
+\centering
+\caption{稳健性检验结果}
+\label{tab:appendix}
+\begin{tabular}{lc}
+\toprule
+变量 & 系数 \\
+\midrule
+年龄 & 0.041** \\
+(0.018) & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% 发表论文列表（盲审版自动省略）
+\begin{publications}
+\begin{enumerate}
+\item 张三, 李四. 劳动力迁移的动态机制研究[J]. 经济研究, 2024(5): 100–115.
+\item Zhang, S., Li, S. Dynamic Migration and Regional Inequality[J]. Journal of Development Economics, 2023, 162: 102–120.
+\end{enumerate}
+
+参与的科研项目：
+\begin{enumerate}
+\item 新型城镇化背景下人口流动研究. 国家社会科学基金项目. 2022–2025.
+\end{enumerate}
+\end{publications}
+
+% 致谢（盲审版自动省略）
+\begin{acknowledgement}
+本研究得以顺利完成，离不开导师的悉心指导、家人的无私支持以及同行的宝贵建议。特别感谢浙江财经大学提供的学术平台与资源支持。文中不足之处，敬请批评指正。
+\end{acknowledgement}
+
+% 封底
+\makebackcover
+
+\end{document}
