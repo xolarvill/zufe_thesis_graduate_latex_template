@@ -1,4 +1,5 @@
 %!TEX program = xelatex
+
 % ==================== 文档类选项 ====================
 % 学位类型: master(硕士) 或 doctor(博士)
 % 论文版本: blind(盲审) / defense(答辩) / final(正式)
@@ -19,16 +20,16 @@
 \addbibresource{example.bib} % 请确保 example.bib 存在或替换为你的 .bib 文件
 
 % ==================== 论文基本信息（占位符）====================
-\thesisTitle{基于动态优化模型的劳动力迁移行为研究}
-\thesisTitleEN{A Study on Labor Migration Behavior Based on Dynamic Optimization Models}
-\authorName{张三}                % 示例姓名
-\studentID{202300000000}         % 示例学号
-\mentorName{李四}                % 示例导师
-\majorName{理论经济学}
-\deptName{经济学院}
-\submitDate{2025年6月}
-\submitDateEN{June 2025}
-\reviewDate{2025年6月} % 盲审日期
+\thesisTitle{基于量子纠缠模型的星际旅行路径优化研究}
+\thesisTitleEN{An Investigation into Interstellar Travel Path Optimization Using Quantum Entanglement Frameworks}
+\authorName{艾达·洛夫莱斯} % 示例姓名
+\studentID{188800000001} % 示例学号
+\mentorName{图灵·艾伦} % 示例导师
+\majorName{应用密码学}
+\deptName{计算科学院}
+\submitDate{2047年12月}
+\submitDateEN{December 2047}
+\reviewDate{2047年12月} % 盲审日期
 \secrecyLevel{公开} % 论文密级
 
 % ==================== 正文开始 ====================
@@ -50,41 +51,39 @@
 % 中文摘要
 \begin{abstract}
 \lipsum[1-2]
-
-\keywords{劳动力迁移；动态优化；回流行为；居住地选择}
+\keywords{星际跃迁；量子纠缠；路径熵；黑洞导航}
 \end{abstract}
 
 % 英文摘要（关键词自动转小写）
 \begin{abstracten}
 \lipsum[1-2]
-
-\keywordsen{labor migration; dynamic optimization; return behavior; residential location choice}
+\keywordsen{interstellar warp; quantum entanglement; path entropy; black hole navigation}
 \end{abstracten}
 
 % 目录
 \tableofcontents
-
 % -------------------- 正文部分（阿拉伯页码）--------------------
 \mainmatter
 
 \chapter{绪论}
+
 \section{研究背景与意义}
 \lipsum[3]
 
 \subsection{文献综述}
-国外学者如 \textcite{greenwood1997} 早期研究……。
+早期科幻作家如 \textcite{asimov1951} 设想……。
 
 \section{研究框架}
 \lipsum[4]
 
 \chapter{理论模型}
-\section{模型设定}
-考虑代表性个体在时期 \( t \) 的效用函数：
-\begin{equation}\label{eq:utility}
-U_t = \ln(C_t) + \theta \cdot V(L_t) - \phi \cdot D(L_t, L_{t-1})
-\end{equation}
-其中 \( C_t \) 为消费，\( L_t \) 为居住地，\( D(\cdot) \) 为迁移成本。
 
+\section{模型设定}
+考虑代表性飞船在时空 \( t \) 的熵函数：
+\begin{equation}\label{eq:utility}
+S_t = \ln(E_t) + \kappa \cdot Q(W_t) - \psi \cdot G(W_t, W_{t-1})
+\end{equation}
+其中 \( E_t \) 为能量，\( W_t \) 为虫洞坐标，\( G(\cdot) \) 为引力损耗。
 \begin{table}[htbp]
 \centering
 \caption{主要变量描述性统计}
@@ -93,28 +92,23 @@ U_t = \ln(C_t) + \theta \cdot V(L_t) - \phi \cdot D(L_t, L_{t-1})
 \toprule
 变量 & 均值 & 标准差 \\
 \midrule
-是否迁移 & 0.18 & 0.38 \\
-月收入（千元） & 6.2 & 4.1 \\
-教育年限 & 10.3 & 3.7 \\
+是否跃迁 & 0.07 & 0.26 \\
+光年距离（百亿） & 3.9 & 2.8 \\
+曲率指数 & 1.4 & 0.9 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-
 % -------------------- 后置部分 --------------------
 \backmatter
-
 % 参考文献
 \printbibliography[heading=bibintoc, title=参考文献]
-
 % 附录
 \appendix
 \chapter{模型推导细节}
 附录公式编号为式~\ref{eq:appendix}。
 \begin{equation}\label{eq:appendix}
-\frac{\partial U}{\partial L} = 0
+\frac{\partial S}{\partial W} = 0
 \end{equation}
-
 \chapter{补充图表}
 附录表格编号为表~\ref{tab:appendix}。
 \begin{table}[htbp]
@@ -125,31 +119,27 @@ U_t = \ln(C_t) + \theta \cdot V(L_t) - \phi \cdot D(L_t, L_{t-1})
 \toprule
 变量 & 系数 \\
 \midrule
-年龄 & 0.041** \\
-(0.018) & \\
+维度 & 0.073*** \\
+(0.022) & \\
 \bottomrule
 \end{tabular}
 \end{table}
-
 % 发表论文列表（盲审版自动省略）
 \begin{publications}
 \begin{enumerate}
-\item 张三, 李四. 劳动力迁移的动态机制研究[J]. 经济研究, 2024(5): 100–115.
-\item Zhang, S., Li, S. Dynamic Migration and Regional Inequality[J]. Journal of Development Economics, 2023, 162: 102–120.
+\item 艾达·洛夫莱斯, 图灵·艾伦. 量子虫洞的熵最小化原理[J]. 未来物理学报, 2046(42): 314–159.
+\item Lovelace, A., Turing, A. Entangled Warp Drives and Cosmic Inflation[J]. Journal of Impossible Physics, 2045, 88: 1–23.
 \end{enumerate}
-
 参与的科研项目：
 \begin{enumerate}
-\item 新型城镇化背景下人口流动研究. 国家社会科学基金项目. 2022–2025.
+\item 银河系边缘跃迁可行性评估. 泛星际科学基金会. 2044–2048.
 \end{enumerate}
 \end{publications}
-
 % 致谢（盲审版自动省略）
 \begin{acknowledgement}
-本研究得以顺利完成，离不开导师的悉心指导、家人的无私支持以及同行的宝贵建议。特别感谢浙江财经大学提供的学术平台与资源支持。文中不足之处，敬请批评指正。
+本研究得以顺利完成，离不开导师的超时空指导、虚拟家人的全息支持以及同行星球学者的光子建议。特别感谢银河计算大学提供的反物质计算资源。文中任何维度塌缩，敬请超光速指正。
 \end{acknowledgement}
-
 % 封底
 \makebackcover
-
 \end{document}
+```
