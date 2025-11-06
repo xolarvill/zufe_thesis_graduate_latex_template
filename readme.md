@@ -16,6 +16,7 @@
 - 支持本地 TTF 字体文件（确保跨平台一致性）
 - 参考文献采用 `biblatex + gb7714-2015`，作者-年份引用格式
 - zufe-thesis.cls 已内置 18+ 个排版必需宏包，覆盖页面、字体、图表、参考文献、页眉页脚等全部格式要求。
+- 封面中如果标题过长会自动换行
 
 ```bash
 ## 📦 文件结构
@@ -24,7 +25,7 @@ zufe-thesis/
 ├── example.tex # 完整示例文档（脱敏版）
 ├── example.bib # 示例参考文献库
 ├── README.md # 本说明文件
-└── fonts/ # （可选）存放本地字体文件
+└── images/ # 存放本地图片
 ├── SimSun.ttf
 ├── SimHei.ttf
 └── KaiTi.ttf
@@ -109,4 +110,4 @@ c）其他类似带有支持LaTeX的编译器
 - 《浙江财经大学博士、硕士学位论文撰写规定》（2025）
 - GB/T 7714-2015《文后参考文献著录规则》
 - ctex 宏包文档
-- [浙财本科论文](https://github.com/sqsssq/ZUFE-Thesis)
+- [浙财本科论文LaTeX模板 - Github](https://github.com/sqsssq/ZUFE-Thesis)
