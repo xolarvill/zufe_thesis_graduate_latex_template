@@ -64,8 +64,8 @@
 \RequirePackage{hyperref}
 \RequirePackage[
   backend=biber,
-  style=gb7714-2015,
-  citestyle=authoryear,
+  style=gb7714-2005,
+  citestyle=gb7714-2015ay,
   sorting=nyvt,
   maxnames=1,
   minnames=1,
@@ -106,10 +106,10 @@
 % 默认字体设置（使用系统字体）
 \setCJKmainfont{宋体-简}[
   AutoFakeBold=2.5,
-  ItalicFont=Kai
+  AutoFakeSlant=0.3
 ]
-\setCJKsansfont{黑体-简}[AutoFakeBold=2.5]
-\setCJKmonofont{Kai}[AutoFakeBold=2.5]
+\setCJKsansfont{黑体-简}[AutoFakeBold=2.5,AutoFakeSlant=0.3]
+\setCJKmonofont{Kai}[AutoFakeBold=2.5,AutoFakeSlant=0.3]
 \setmainfont{Times New Roman}
 
 % 定义字体命令供用户使用
