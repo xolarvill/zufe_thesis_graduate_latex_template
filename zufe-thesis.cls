@@ -37,6 +37,9 @@
   openany
 ]{ctexbook}
 
+% ==================== 设置目录深度 ====================
+\setcounter{tocdepth}{1}
+
 % ==================== 加载必需宏包 ====================
 % 页面设置
 \RequirePackage{geometry}
@@ -61,7 +64,6 @@
 \RequirePackage{ragged2e}
 
 % 引用和链接
-\RequirePackage{hyperref}
 \RequirePackage[
   backend=biber,
   style=gb7714-2005,
@@ -73,6 +75,7 @@
   doi=false,
   gbpub=false
 ]{biblatex}
+\RequirePackage{hyperref}
 
 % 其他工具
 \RequirePackage{etoolbox}
@@ -92,9 +95,6 @@
   bindingoffset=0cm
 }
 
-% 清除奇偶页边距偏移
-% \setlength{\oddsidemargin}{0pt}
-% \setlength{\evensidemargin}{0pt}
 
 % ==================== 字体设置区域 ====================
 % 用户可以在主文档中使用以下命令覆盖字体设置:
@@ -647,13 +647,21 @@
     {1em}
     {}
   
-  % 修改目录格式
+  %  修改目录格式 - 简化版本，避免与ctex冲突
   \titlecontents{chapter}[0em]
     {\zihao{-4}\songti}
     {\thecontentslabel\quad}
-    {}
+    {附录}  % 无编号时显示"附录"
     {\titlerule*[0.2pc]{.}\contentspage}
 }
+
+
+\titlecontents{section}[2em]
+  {\zihao{-4}\songti}
+  {\thecontentslabel\quad}
+  {}
+  {\titlerule*[0.2pc]{.}\contentspage}
+
 
 % 发表论文列表环境（盲审版省略）
 \newenvironment{publications}{
@@ -698,28 +706,28 @@
   
   \vspace{0.25cm}
 
-  {\zihao{4}地址：浙江省杭州市下沙高教园区学源街18号}
+  {\zihao{4}\kaishu 地址：浙江省杭州市下沙高教园区学源街18号}
     
   \vspace{0.5cm}
     
-  {\zihao{4}邮编：310018}
+  {\zihao{4}\kaishu 邮编：310018}
     
   \vspace{0.5cm}
 
-  {\zihao{4}电话：0571-86735317}
+  {\zihao{4}\kaishu 电话：0571-86735317}
 
   \vspace{0.5cm}
     
-  {\zihao{4}网址：http://www.zufe.edu.cn}
+  {\zihao{4}\kaishu 网址：http://www.zufe.edu.cn}
 }
 
 % ==================== 页码设置 ====================
 % 前置部分使用罗马数字页码
 \renewcommand{\frontmatter}{
-  \cleardoublepage
+  \clearpage  % 改用 clearpage 而不是 cleardoublepage
   \pagenumbering{Roman}
   \renewcommand{\thepage}{\Roman{page}}
-} % 修正：强制大写罗马页码
+}
 
 % 正文部分使用阿拉伯数字页码
 \renewcommand{\mainmatter}{
