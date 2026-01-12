@@ -690,6 +690,15 @@
 % ==================== 封底 ====================
 \newcommand{\makebackcover}{
   \clearpage
+  \ifodd\value{page}
+    % 如果当前是奇数页，什么都不做（封底会在下一页偶数页）
+  \else
+    % 如果当前是偶数页，插入空白页跳到下一个偶数页
+    \clearpage
+    \thispagestyle{empty}
+    \mbox{}
+    \clearpage
+  \fi
   \thispagestyle{empty}
   
   \vspace*{\fill}
